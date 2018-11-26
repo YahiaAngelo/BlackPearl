@@ -1,0 +1,119 @@
+<resources>
+    <string name="app_name">BlackPearl</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">BlackPearl</string>
+    <string name="nav_header_subtitle">The new Samsung Experience</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+    <string name="image">image</string>
+    <string name="open">Open</string>
+    <string name="version">Version</string>
+    <string name="changelog">Changelog</string>
+    <string name="links">Links</string>
+    <string name="about">About the app</string>
+    <string name="about_us">About us</string>
+    <string name="bp_chat_group">BlackPearl Rom Chat Group</string>
+    <string name="bp_channel">BlackPearl Rom Newsletter</string>
+    <string name="kill_switch">Kill-Switch</string>
+    <string name="telegram">Telegram</string>
+    <string name="ig">Instagram</string>
+    <string name="donate">Donate</string>
+    <string name="yahia_angelo">Yahia Angelo</string>
+    <string name="github">Github</string>
+    <string name="remove_ads">Remove Ads</string>
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New roms update notifications</string>
+    <string name="changelog_text">Initial Release</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+
+    <string name="source_code">Source Code</string>
+    <string name="donation">Donate</string>
+    <string name="yahia_name">Yahia Angelo</string>
+    <string name="yahia_desc">BlackPearl App Developer And Designer</string>
+    <string name="hamza_name">Kill-Switch</string>
+    <string name="hamza_desc">BlackPearl ROM Developer</string>
+    <string name="info_Text">Get the latest roms and updates of BlackPearl roms in easy way.</string>
+    <string name="app_version">1.1</string>
+
+    //Links
+    <string name="blackPearlTgChat">https://t.me/joinchat/EOTeM0T2h4RKA6BgwaplRA</string>
+    <string name="blackPearlTgChannel">https://t.me/joinchat/AAAAAFH7UgyapnKSMdmvIQ</string>
+    <string name="killswitchTg">https://t.me/DR_Flakka</string>
+    <string name="killswitchIg">https://www.instagram.com/f16_zx9/</string>
+    <string name="killswitchPaypal">https://www.paypal.me/HamzaZaharna</string>
+    <string name="angeloTg">https://t.me/YahiaAngelo</string>
+    <string name="angeloGithub">https://github.com/YahiaAngelo</string>
+    <string name="angeloPaypal">https://www.paypal.me/yahiamostafa</string>
+    <string name="kill_switch_email">hamzazaharna13@gmail.com</string>
+</resources>
