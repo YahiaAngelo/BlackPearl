@@ -1,0 +1,25 @@
+
+sudo: required
+language: android
+jdk: oraclejdk8
+android:
+ components:
+    - platform-tools
+    - tools
+    - build-tools-28.0.3
+    - android-28
+    - extra-android-m2repository
+before_script:
+ - sudo mkdir -p "$ANDROID_SDK/licenses"
+ - yes
+ - sudo chmod +x gradlew
+script:
+ - ./gradlew build --stacktrace
+before_cache:
+  - sudo rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - sudo rm -rf $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+    - $HOME/.android/build-cache
