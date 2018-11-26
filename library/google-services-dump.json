@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "",
-    "firebase_url": "",
-    "project_id": "",
-    "storage_bucket": ""
+    "project_number": "413766352523",
+    "firebase_url": "https://blackpearl-angelo.firebaseio.com",
+    "project_id": "blackpearl-angelo",
+    "storage_bucket": "blackpearl-angelo.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "",
+        "mobilesdk_app_id": "1:413766352523:android:9993844bbf17b5a7",
         "android_client_info": {
           "package_name": "com.angelo.blackpearl"
         }
       },
       "oauth_client": [
         {
-          "client_id": "",
+          "client_id": "413766352523-mlqbo5rvmpto40l7fsbu47o7q2nnlcpk.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.angelo.blackpearl",
-            "certificate_hash": ""
+            "certificate_hash": "8fcff746d7b0c09a6587ba147b6eef687c858bb2"
           }
         },
         {
-          "client_id": "",
+          "client_id": "413766352523-bhnlu6d9f788skqi0plgbp1llsbpmrvo.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": ""
+          "current_key": "AIzaSyBsO7lyHrRhZrkUOMbJpgdC5OJ431LHBBA"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "",
+              "client_id": "413766352523-bhnlu6d9f788skqi0plgbp1llsbpmrvo.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
