@@ -116,7 +116,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="@string/changelog_text"
+                    android:text="@string/changelog"
                     android:textSize="14sp" />
             </LinearLayout>
 

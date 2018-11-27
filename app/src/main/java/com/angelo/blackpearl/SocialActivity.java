@@ -21,6 +21,7 @@ public class SocialActivity extends AppCompatActivity {
         // Layouts
         LinearLayout blackPearlTgChat = findViewById(R.id.blackpearl_support_tg_layout);
         LinearLayout blackPearlTgChannel = findViewById(R.id.blackpearl_channel_tg_layout);
+        LinearLayout blackPearlGithub = findViewById(R.id.blackpearl_github);
         LinearLayout killswitchTg = findViewById(R.id.killswitch_tg_layout);
         LinearLayout killswitchIg = findViewById(R.id.killswitch_ig_layout);
         LinearLayout killswitchPaypal = findViewById(R.id.killswitch_pp_layout);
@@ -40,6 +41,13 @@ public class SocialActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openLink(getString(R.string.blackPearlTgChannel));
+            }
+        });
+
+        blackPearlGithub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openLink("https://github.com/YahiaAngelo/BlackPearl");
             }
         });
 

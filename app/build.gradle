@@ -7,7 +7,7 @@ android {
         minSdkVersion 23
         targetSdkVersion 28
         versionCode 1
-        versionName "1.1"
+        versionName "1.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -35,9 +35,11 @@ dependencies {
     annotationProcessor 'androidx.room:room-compiler:2.1.0-alpha02'
     testImplementation 'junit:junit:4.12'
     implementation 'com.mikepenz:materialdrawer:6.1.1'
+    implementation 'com.android.volley:volley:1.1.1'
     implementation 'jp.wasabeef:recyclerview-animators:2.1.0'
     implementation 'com.mikepenz:iconics-core:3.1.0'
     implementation 'com.mikepenz:iconics-views:3.1.0'
+    implementation 'com.github.amirdew:JSON:v1.0.0'
     androidTestImplementation 'androidx.test:runner:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
     implementation 'com.google.firebase:firebase-database:16.0.5'

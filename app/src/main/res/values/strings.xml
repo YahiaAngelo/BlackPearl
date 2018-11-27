@@ -90,7 +90,7 @@
     <string name="pref_header_notifications">Notifications</string>
 
     <string name="pref_title_new_message_notifications">New roms update notifications</string>
-    <string name="changelog_text">Initial Release</string>
+    <string name="changelog_text">v1.2:Added Github repo link \n v1.1:Initial Release</string>
 
     <string name="pref_title_ringtone">Ringtone</string>
     <string name="pref_ringtone_silent">Silent</string>
@@ -104,7 +104,7 @@
     <string name="hamza_name">Kill-Switch</string>
     <string name="hamza_desc">BlackPearl ROM Developer</string>
     <string name="info_Text">Get the latest roms and updates of BlackPearl roms in easy way.</string>
-    <string name="app_version">1.1</string>
+    <string name="app_version">1.2</string>
 
     //Links
     <string name="blackPearlTgChat">https://t.me/joinchat/EOTeM0T2h4RKA6BgwaplRA</string>
@@ -116,4 +116,5 @@
     <string name="angeloGithub">https://github.com/YahiaAngelo</string>
     <string name="angeloPaypal">https://www.paypal.me/yahiamostafa</string>
     <string name="kill_switch_email">hamzazaharna13@gmail.com</string>
+    <string name="blackpearl_github">BlackPearl Github repo</string>
 </resources>
