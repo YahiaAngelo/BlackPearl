@@ -28,10 +28,11 @@ public class MessagingService extends FirebaseMessagingService {
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
         createNotificationChannel(remoteMessage.getMessageId());
         NotificationCompat.Builder mBuildr = new NotificationCompat.Builder(this, remoteMessage.getMessageId())
-                .setSmallIcon(R.drawable.xda)
+                .setSmallIcon(R.mipmap.ic_launcher_foreground)
                 .setContentTitle(remoteMessage.getNotification().getTitle())
                 .setContentText(remoteMessage.getNotification().getBody())
                 .setContentIntent(pendingIntent)
+                .setAutoCancel(true)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
             mBuildr.setVibrate(new long[] { 1000, 1000, 1000, 1000, 1000 });
 
@@ -45,8 +46,8 @@ public class MessagingService extends FirebaseMessagingService {
         // Create the NotificationChannel, but only on API 26+ because
         // the NotificationChannel class is new and not in the support library
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            CharSequence name = "BlackPearl Noti";
-            String description = "BlackPearl Noti";
+            CharSequence name = "BlackPearl posts";
+            String description = "BlackPearl posts notifications";
             int importance = NotificationManager.IMPORTANCE_DEFAULT;
             NotificationChannel channel = new NotificationChannel(id, name, importance);
             channel.setDescription(description);
