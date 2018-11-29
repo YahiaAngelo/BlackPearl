@@ -1,6 +1,6 @@
 # BlackPearl 
 
-[![Build Status](https://travis-ci.com/YahiaAngelo/BlackPearl.svg?branch=master)](https://github.com/YahiaAngelo/BlackPearl)
+[![Build Status](https://travis-ci.com/YahiaAngelo/BlackPearl.svg?branch=master)](https://travis-ci.com/YahiaAngelo/BlackPearl)
 
 BlackPearl app gets you the latest roms and updates by the rom developer.
 
