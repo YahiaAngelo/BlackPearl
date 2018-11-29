@@ -180,11 +180,30 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.pref_general);
             setHasOptionsMenu(true);
-
+             SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences("sharedPreferences", Context.MODE_PRIVATE);
+             SharedPreferences.Editor editor = sharedPreferences.edit();
             // Bind the summaries of EditText/List/Dialog/Ringtone preferences
             // to their values. When their values change, their summaries are
             // updated to reflect the new value, per the Android Design
             // guidelines.
+
+            SwitchPreference updatesCheck = (SwitchPreference) findPreference("updatesCheck");
+            updatesCheck.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                @Override
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+
+                    boolean  checkForUpdates = (Boolean) newValue;
+                    if (checkForUpdates){
+                        editor.putBoolean("checkForUpdates", true);
+                        editor.apply();
+                    }else {
+                        editor.putBoolean("checkForUpdates", false);
+                        editor.apply();
+                    }
+
+                    return true;
+                }
+            });
 
         }
 

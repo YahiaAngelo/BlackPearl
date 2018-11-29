@@ -82,7 +82,10 @@
     <string name="donate">Donate</string>
     <string name="yahia_angelo">Yahia Angelo</string>
     <string name="github">Github</string>
-    <string name="remove_ads">Remove Ads</string>
+    <string name="updates_check">Check for updates</string>
+    <string name="checking_for_updates">Checking for updates</string>
+    <string name="new_update">New Update Available!</string>
+    <string name="uptodate">Your app is already up to date!</string>
 
     <string name="pref_title_system_sync_settings">System sync settings</string>
 

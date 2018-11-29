@@ -172,7 +172,7 @@
             android:layout_height="match_parent">
 
             <LinearLayout
-                android:id="@+id/donation_button"
+                android:id="@+id/updates_check_button"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginTop="5dp"
@@ -182,23 +182,24 @@
                 android:orientation="horizontal">
 
                 <com.mikepenz.iconics.view.IconicsImageView
+                    android:id="@+id/updates_check_icon"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    app:iiv_icon="faw-newspaper"
+                    app:iiv_icon="faw-arrow-alt-circle-down"
                     app:iiv_size="24dp"
                     app:iiv_color="@color/primary"
                     android:layout_marginStart="8dp"
                     android:background="@android:color/transparent" />
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/updates_check_text"
                     style="@style/textStyle"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="16dp"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="@string/about"
+                    android:text="@string/updates_check"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -206,7 +207,7 @@
                 android:id="@+id/aboutus_button"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:layout_below="@+id/donation_button"
+                android:layout_below="@+id/updates_check_button"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/ripple"
                 android:clickable="true"

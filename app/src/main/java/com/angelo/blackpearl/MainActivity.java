@@ -1,8 +1,13 @@
 package com.angelo.blackpearl;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -27,6 +32,8 @@ import java.util.List;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -49,7 +56,6 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         setContentView(R.layout.activity_main);
 
         context = getApplicationContext();
-
 
         final PostDatabase postDatabase = PostDatabase.getInstance(this);
         final SwipeRefreshLayout swipeRefreshLayout = (SwipeRefreshLayout)findViewById(R.id.swiperefresh);
@@ -173,6 +179,8 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
                     }
                 })
                 .build();
+        //checkForUpdates method every time MainActivity starts (At the end of the activity)
+        checkForUpdates();
 
     }
 
@@ -209,5 +217,62 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         mswipeRefresh.setRefreshing(false);
 
 
+    }
+
+    private void checkForUpdates(){
+        //Checks if user enabled to check for updates on startup
+        SharedPreferences sharedPreferences = this.getSharedPreferences("sharedPreferences", Context.MODE_PRIVATE);
+        Boolean isCheckForUpdates = sharedPreferences.getBoolean("checkForUpdates", true);
+
+        if (isCheckForUpdates){
+            //Check for latest release from Github
+            QueryUtils.getLatestRelease(this);
+            Double versionCode = Double.valueOf(BuildConfig.VERSION_NAME);
+            String latestVersion = sharedPreferences.getString("latestRelease", getString(R.string.app_version));
+            Double latestVersionDouble = Double.valueOf(latestVersion);
+            //Checks if there's new update
+            if(!latestVersionDouble.equals(versionCode)){
+                //Show update notification
+                Intent intent = new Intent(this, InfoActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
+                Intent updateIntent = new Intent(this, ActionReceiver.class);
+                updateIntent.putExtra("action", "openReleasesLink");
+                PendingIntent updatePendingIntent =
+                        PendingIntent.getBroadcast(this, 1, updateIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+                createNotificationChannel("6969");
+                NotificationCompat.Builder mBuildr = new NotificationCompat.Builder(this, "6969")
+                        .setSmallIcon(R.mipmap.ic_launcher_foreground)
+                        .setContentTitle(getString(R.string.new_update))
+                        .setContentText("BlackPearl v" + latestVersion + " is available!")
+                        .setContentIntent(pendingIntent)
+                        .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                        .setAutoCancel(true)
+                        .addAction(R.drawable.logo, "Update", updatePendingIntent);
+                mBuildr.setVibrate(new long[] { 1000, 1000, 1000, 1000, 1000 });
+
+
+                NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(this);
+
+                notificationManagerCompat.notify(6969, mBuildr.build());
+
+            }
+        }
+    }
+
+    private void createNotificationChannel(String id) {
+        // Create the NotificationChannel, but only on API 26+ because
+        // the NotificationChannel class is new and not in the support library
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "BlackPearl updates";
+            String description = "BlackPearl updates notifications";
+            int importance = NotificationManager.IMPORTANCE_HIGH;
+            NotificationChannel channel = new NotificationChannel(id, name, importance);
+            channel.setDescription(description);
+            // Register the channel with the system; you can't change the importance
+            // or other notification behaviors after this
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
     }
 }
