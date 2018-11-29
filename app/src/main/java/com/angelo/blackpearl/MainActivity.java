@@ -92,6 +92,9 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
+        //Reverse the layout to get latest post first
+        linearLayoutManager.setReverseLayout(true);
+        linearLayoutManager.setStackFromEnd(true);
         recyclerView.setLayoutManager(linearLayoutManager);
 
 
