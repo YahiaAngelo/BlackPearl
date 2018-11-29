@@ -19,7 +19,7 @@ BlackPearl uses a number of open source projects to work properly:
 * [Android-Iconics](https://github.com/mikepenz/Android-Iconics) - Android-Iconics - Use any icon font, or vector (.svg) as drawable in your application. 
 * [glide](https://github.com/bumptech/glide) - An image loading and caching library for Android focused on smooth scrolling.
 
-And of course Dillinger itself is open source with a [public repository](https://github.com/YahiaAngelo/BlackPearl) on GitHub.
+And of course BlackPearl itself is open source with a [public repository](https://github.com/YahiaAngelo/BlackPearl) on GitHub.
 
 ### Want to build your BlackPearl app?
 
